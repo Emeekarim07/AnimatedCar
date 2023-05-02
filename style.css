@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    animation: bodyMove linear .5s infinite;
+}
+
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    position: absolute;
+}
+.trees{
+
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -517px;
+}
+
+
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+    animation: carRotation linear 16s infinite;
+}
+
+.car{
+    height: 284px;
+    width: 907px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom: 29vh;
+    animation: carMove linear 1s infinite;
+}
+
+
+.wheel1 img{
+    width: 177px;
+    position: relative;
+    top: 111px;
+    left: 124px;
+    animation: wheelrotation linear .6s infinite;
+}
+
+.wheel2 img{
+    width: 178px;
+    position: relative;
+    top: -68px;
+    left: 628px; 
+    animation: wheelrotation linear .6s infinite;
+}
+
+@keyframes wheelrotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carRotation
+{
+    100%{
+        transform: translateX(-500vw)
+    }
+}
+
+@keyframes carMove
+{
+    0%{
+        transform: translateY(-2.5px)
+    }
+    25%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(-1.5px)
+    }
+    75%{
+        transform: translateY(0)
+    }
+    100%{
+        transform: translateY(-2.5px)
+    }
+}
+
+@keyframes bodyMove
+{
+    0%{
+        transform: translateY(2.5px)
+    }
+    25%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(-1.5px)
+    }
+    75%{
+        transform: translateY(0)
+    }
+    100%{
+        transform: translateY(2.5px)
+    }
+}
